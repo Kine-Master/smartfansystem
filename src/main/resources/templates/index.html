@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fan System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Smart Fan System</h1>
+</header>
+
+<!-- Device Status -->
+<div id="device-status">
+    Device Status: <span id="status-text">Checking...</span>
+</div>
+
+<!-- Current Fan Status -->
+<div id="status">
+    <h2>Fan Status</h2>
+    <p id="temperature">Temperature: -- °C</p>
+    <p id="distance">Distance: -- cm</p>
+    <p id="fanStatus">Fan Status: OFF</p>
+    <p id="currentReading">Current Consumption: -- A</p>
+    <p id="electricUsage">Electric Usage: -- kWh</p>
+</div>
+
+<!-- Update Thresholds Section -->
+<div id="controls">
+    <h2>Change Thresholds</h2>
+    <label for="tempThreshold">Temperature Threshold (°C): </label>
+    <input type="number" id="tempThreshold" name="tempThreshold" min="0" max="100" value="30">
+    <br>
+
+    <label for="proximityThreshold">Proximity Threshold (cm): </label>
+    <input type="number" id="proximityThreshold" name="proximityThreshold" min="0" max="300" value="100">
+    <br>
+
+    <button id="updateThresholds">Update Thresholds</button>
+</div>
+
+<!-- Fan Status History Table -->
+<div id="history">
+    <h2>Fan Status History</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Temperature (°C)</th>
+            <th>Distance (cm)</th>
+            <th>Status</th>
+            <th>Timestamp</th>
+        </tr>
+        </thead>
+        <tbody id="historyData">
+        <!-- Fan status history will be loaded here -->
+        </tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
