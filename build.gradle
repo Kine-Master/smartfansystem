@@ -30,6 +30,9 @@ dependencies {
 	// For test classes (optional)
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	//For serial communication
+	implementation 'com.fazecast:jSerialComm:2.6.2'
 }
 
 tasks.named('test') {
